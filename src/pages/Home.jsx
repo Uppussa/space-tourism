@@ -4,13 +4,13 @@ import home from '../assets/home.jpg';
 
 const Home = () => {
     return (
-        <div className="relative h-screen bg-black text-white">
+        <div className="relative h-screen text-white">
             <img
                 src={home}
                 alt="Earth from space"
-                className="absolute inset-0 w-full h-full object-cover opacity-50"
+                className="absolute inset-0 w-full h-full object-cover "
             />
-            <div className="relative z-10 flex flex-col h-full">
+            <div className="relative z-10 opacity-95 flex flex-col h-full">
 
                 <div className="flex justify-around items-center text-white h-screen">
                     <div className="text-justify  max-w-2xl m-auto space-y-4">
@@ -34,6 +34,3 @@ const Home = () => {
 }
 
 export default Home
-{/* <h1 className="text-4xl font-light">SO, YOU WANT TO TRAVEL TO</h1>
-                        <h2 className="text-6xl font-bold">SPACE</h2>
-                        <p className="max-w-xl mx-auto text-lg"></p> */}

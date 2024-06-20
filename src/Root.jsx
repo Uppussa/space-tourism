@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import Destination from "./pages/Destination";
 import Crew from "./pages/Crew";
@@ -12,10 +12,11 @@ export const Root = () => {
                 <Navigation />
                 <Routes>
                     <Route index element={<Home />} />
-                    <Route path="/Home" element={<Home />} />
-                    <Route path="/Destination" element={<Destination />} />
-                    <Route path="/Crew" element={<Crew />} />
-                    <Route path="/Technology" element={<Technology />} />
+                    <Route path="/home" element={<Home />} />
+                    <Route path="/destination" element={<Navigate to="/destination/moon" />} />
+                    <Route path="/destination/:destinationId" element={<Destination />} />
+                    <Route path="/crew" element={<Crew />} />
+                    <Route path="/technology" element={<Technology />} />
                 </Routes>
             </Router>
         </>
